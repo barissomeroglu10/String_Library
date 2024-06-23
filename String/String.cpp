@@ -1,4 +1,4 @@
-﻿/*
+/*
 Purpose of the code is learning string library.
 
 Developer = Barış Someroğlu
@@ -12,12 +12,19 @@ using namespace std;
 
 int main()
 {
-	 /* 1. DEFINITION and INITIAL VALUE ASSIGNMENT
+	system("color E9");
+
+	// Example. shows string functions under string library
+
+	 /* 
+	 1. DEFINITION and INITIAL VALUE ASSIGNMENT
 		1a. DEFINITION
 		1b. USEING " "
-		1c. READING DATA WITH CONSOLE */	 
-	
-	/*  string Example = "First String Definition.";
+		1c. READING DATA WITH CONSOLE
+	*/
+
+	/* 
+	string Example = "First String Definition.";
 
 	cout << Example << endl;
 
@@ -28,18 +35,22 @@ int main()
 	cout << "Enter Something = ";
 	cin >> Example;
 
-	cout << endl << Example << endl; */
+	cout << endl << Example << endl;
+	*/
 
-	// Example. shows string functions under string library
 
-	/* 2. STRIING MEMORY FUNCTIONS
+
+	/*
+	2. STRIING MEMORY FUNCTIONS
 		2a. size and lenght
 		2b. resize
 		2c. capacity
 		2d. reserve
 		2e. clear
-		2f. empty */
+		2f. empty
+	*/
 	
+	/*
 	string Example2 = "Learning String's Size.";
 
 	cout << Example2 << endl << endl;
@@ -87,12 +98,138 @@ int main()
 
 	Example2 = "Now string not empty";
 	cout << Example2 << "\n" << Example2.empty() << endl;
-
-	/* 3. ACCESS METHODS
-	
-	
 	*/
 
+
+
+	/*
+	3. ACCESS METHODS
+		3a. at FUNCTİON
+		3b. [] OPERATOR
+	*/
+	
+	/*
+	string Example3 = "Leaning String Access Methods";
+
+	// at function
+	cout << "Finding string character with using .at" << endl;
+	cout << "Character at 2. index = " << Example3.at(2) << endl;
+
+	// [] operator
+	cout << "\nFinding string character with using [] operator" << endl;
+	cout << "Character at 2. index = " << Example3.at(2) << endl;
+	*/
+
+	/* 4.TEXT EDITING FUNCTIONS
+		- + operator 
+		- += operator 
+		- append
+		- push_back
+		- assign
+		- insert
+		- erase
+		- replace
+		- swap
+		- substr
+	*/
+
+    string Example4, Example5;
+
+	cout << "Please Enter 1. String = ";
+	cin >> Example4;
+	
+	cout << "Please Enter 2. String = ";
+	cin >> Example5;
+
+	// + operator to connect strings
+	cout << "\nUsing + operator ---> " << Example4 + " " + Example5 << endl;
+
+	// += opeartor to connect strings
+	Example4 += " ";
+	Example4 += Example5;
+
+	cout << "\nUsing += operator ---> " << Example4 << endl;
+
+	cout << "--------------------------------------------------";
+
+	cout << "\nPlease Enter 1. String = ";
+	cin >> Example4;
+
+	cout << "Please Enter 2. String = ";
+	cin >> Example5;
+
+	// .append to add a string at the end of one string
+	Example4.append(Example5);
+
+	cout << "\nUsing Example4.append(Example5) ---> " << Example4 << endl;
+
+	Example4 = " String";
+	Example5 = "Adding";
+
+	cout << "\nExample4 = " << Example4 << endl;
+	cout << "Example5 = " << Example5 << endl;
+
+	Example5.append(Example4, 0, 4);
+
+	cout << "\nUsing Example5.append(Example4, 0, 4) ---> " << Example5 << endl;
+
+	cout << "--------------------------------------------------";
+
+	Example4 = "String";
+	Example5 = "Adding";
+
+	cout << "\nExample4 = " << Example4 << endl;
+	cout << "Example5 = " << Example5 << endl;
+
+	// push_back to add a character at the end of a string
+	Example4.push_back('1');
+	Example5.push_back('2');
+
+	cout << "\nUsing Example4.push_back('1'); ---> " << Example4 << endl;
+	cout << "\nUsing Example5.push_back('2'); ---> " << Example5 << endl;
+
+	cout << "--------------------------------------------------";
+
+	Example4 = " String";
+	Example5 = "Adding";
+
+	cout << "\nExample4 = " << Example4 << endl;
+	cout << "Example5 = " << Example5 << endl;
+
+	// assign to assignment one string to another string
+	Example4.assign(Example5, 0, 3);
+
+	cout << "\nUsing Example4.assign(Example5, 0, 3) ---> " << Example4 << endl;
+
+	cout << "--------------------------------------------------";
+
+	Example4 = "String";
+	Example5 = "Adding";
+
+	cout << "\nExample4 = " << Example4 << endl;
+	cout << "Example5 = " << Example5 << endl;
+
+	// insert to add a string to to any position of a string
+	Example4.insert(3, Example5, 0, 6);
+
+	cout << "\nExample4.insert(3, Example5, 0, 6) ---> " << Example4 << endl;
+
+	cout << "--------------------------------------------------";
+
+	Example4 = "String";
+	Example5 = "Adding";
+
+	cout << "\nExample4 = " << Example4 << endl;
+	cout << "Example5 = " << Example5 << endl;
+
+	// erase to delete any position of a string
+	Example4.erase(3, 3);
+	Example5.erase(0, 3);
+
+	cout << "\nExample4.erase(3, 3) ---> " << Example4 << endl;
+	cout << "\nExample5.erase(0, 3) ---> " << Example5 << endl;
+
+	cout << "--------------------------------------------------";
 
 	return 0;
 }
