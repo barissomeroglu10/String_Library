@@ -230,6 +230,49 @@ int main()
 	cout << "\nExample5.erase(0, 3) ---> " << Example5 << endl;
 
 	cout << "--------------------------------------------------";
+	
+	Example4 = "String";
+	Example5 = "Adding";
+
+	cout << "\nExample4 = " << Example4 << endl;
+	cout << "Example5 = " << Example5 << endl;
+	
+	// replace = erase + insert
+	// replace firstly makes erase any position of a string then adds a string to any position of a string
+	
+	Example4.replace(3, 3, Example5, 3, 3);
+	Example5.replace(3, 3, Example4, 0, 3);
+	
+	cout << "\nExample4.replace(3, 3, Example5, 3, 3) ---> " << Example4 << endl;
+	cout << "\nExample5.replace(3, 3, Example4, 0, 3) ---> " << Example5 << endl;
+	
+	cout << "--------------------------------------------------";
+	
+	Example4 = "String";
+	Example5 = "Adding";
+
+	cout << "\nExample4 = " << Example4 << endl;
+	cout << "Example5 = " << Example5 << endl;
+	
+	// swap changes value of strings between them
+	Example4.swap(Example5);
+	
+	cout << "\nExample4 after Example4.swap(Example5) ---> " << Example4 << endl;
+	
+	cout << "\nExample5 after Example4.swap(Example5) ---> " << Example5 << endl;
+	
+	cout << "--------------------------------------------------";
+	
+	Example4 = "String";
+	Example5 = "Adding";
+
+	cout << "\nExample4 = " << Example4 << endl;
+	cout << "Example5 = " << Example5 << endl;
+	
+	// substr copy any position of a string
+	Example5 = Example4.substr(0, 3);
+	
+	cout << "\nExample5 = Example4.substr(0, 3) ---> " << Example5 << endl;
 
 	return 0;
 }
